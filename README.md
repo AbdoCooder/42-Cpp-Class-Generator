@@ -108,7 +108,7 @@ The entire header boilerplate will appear instantly! The snippet is smart—it u
 
 The full implementation of the canonical form will be generated. It even automatically includes your corresponding `.hpp` file.
 
-![GIF showing the 42class snippet expanding in VSCode]([https://i.imgur.com/k2tZ3bV.gif](https://github.com/AbdoCooder/42-Cpp-Class-Generator/blob/main/42class.gif))
+![GIF showing the 42class snippet expanding in VSCode](https://github.com/AbdoCooder/42-Cpp-Class-Generator/blob/main/42class.gif)
 
 ### 💡 Pro Tip: Using Tabstops
 
