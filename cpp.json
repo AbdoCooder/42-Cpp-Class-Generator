@@ -1,0 +1,57 @@
+{
+  "C++ Class Boilerplate": {
+    "prefix": "42class",
+    "body": [
+    	"#include \"${1:${TM_FILENAME_BASE}}.hpp\"",
+		"",
+		"${1:${TM_FILENAME_BASE}}::${1:${TM_FILENAME_BASE}}() {",
+		"    std::cout << \"${1:${TM_FILENAME_BASE}} constructed\" << std::endl;",
+		"}",
+		"",
+		"${1:${TM_FILENAME_BASE}}::${1:${TM_FILENAME_BASE}}(const ${1:${TM_FILENAME_BASE}} &other) {",
+		"    std::cout << \"${1:${TM_FILENAME_BASE}} copied\" << std::endl;",
+		"    *this = other;",
+		"}",
+		"",
+		"${1:${TM_FILENAME_BASE}} &${1:${TM_FILENAME_BASE}}::operator=(const ${1:${TM_FILENAME_BASE}} &other) {",
+		"    std::cout << \"${1:${TM_FILENAME_BASE}} assigned\" << std::endl;",
+		"    if (this != &other) {",
+		"        ${2:// Copy fields here}",
+		"    }",
+		"    return *this;",
+		"}",
+		"",
+		"${1:${TM_FILENAME_BASE}}::~${1:${TM_FILENAME_BASE}}() {",
+		"    std::cout << \"${1:${TM_FILENAME_BASE}} destroyed\" << std::endl;",
+		"}",
+		"${3:}",
+    ],
+    "description": "Generate a C++ class with canonical form"
+  },
+
+  "C++ Class Boilerplate [HeaderFile]": {
+    "prefix": "42header",
+    "body": [
+      "#ifndef ${1:${TM_FILENAME_BASE}}_HPP",
+      "# define ${1:${TM_FILENAME_BASE}}_HPP",
+      "",
+      "# include <iostream>",
+      "",
+      "class ${1:${TM_FILENAME_BASE}}",
+	  "{",
+      "  public:",
+      "    ${1:${TM_FILENAME_BASE}}();",
+      "    ${1:${TM_FILENAME_BASE}}(const ${1:${TM_FILENAME_BASE}} &other);",
+      "    ${1:${TM_FILENAME_BASE}} &operator=(const ${1:${TM_FILENAME_BASE}} &other);",
+      "    ~${1:${TM_FILENAME_BASE}}();",
+      "",
+      "  private:",
+      "    ${2:// Add members here}",
+      "};",
+      "",
+      "#endif // ${1:${TM_FILENAME_BASE}}_HPP",
+      "${3:}",
+    ],
+    "description": "Generate a C++ class header with canonical form"
+  }
+}
