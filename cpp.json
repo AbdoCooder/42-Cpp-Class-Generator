@@ -32,8 +32,8 @@
   "C++ Class Boilerplate [HeaderFile]": {
     "prefix": "42header",
     "body": [
-      "#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
-      "# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
+  "#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
+  "# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
       "",
       "# include <iostream>",
       "",
@@ -49,9 +49,26 @@
       "    ${2:// Add members here}",
       "};",
       "",
-      "#endif // ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
+  "#endif // ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
       "${3:}",
     ],
     "description": "Generate a C++ class header with canonical form"
-  }
+  },
+
+  "C++ cout & endl": {
+    "prefix": "scol",
+    "body": [
+      "std::cout << \"${1:}\" << std::endl;",
+    ],
+    "description": "write string to stdout with new line"
+  },
+
+  "C++ String Type": {
+    "prefix": "str",
+    "body": [
+  	"std::string ",
+    ],
+    "description": "Generate a C++ std::string faster"
+  },
+
 }
